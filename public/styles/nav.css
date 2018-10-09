@@ -1,0 +1,10 @@
+nav {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  color: #e8fdff;
+  background-color: #00a087;
+  padding-left: 2em;
+  padding-right: 2em;
+
+}
