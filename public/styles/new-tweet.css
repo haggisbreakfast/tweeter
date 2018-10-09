@@ -1,0 +1,15 @@
+.new-tweet {
+  width: 450px;
+  border-radius: 5px;
+  background: #eeeeee;
+  border: 1px solid #d1d0d0;
+  margin: auto;
+  padding: 10px;
+}
+
+.new-tweet-header {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  border-bottom: 1px solid #535353;
+}

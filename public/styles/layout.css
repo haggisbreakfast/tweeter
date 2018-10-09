@@ -18,10 +18,19 @@ html {
  */
 
 body {
-  margin: 0;
+  margin: auto;
   color: #244751;
   background-color: #eee;
   font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+  width: 600px;
+  height: 100vh;
+  text-align: center;
+  margin: auto;
+  padding-top: 150px;
+  background-color: #ffffff;
 }
 
 /*
