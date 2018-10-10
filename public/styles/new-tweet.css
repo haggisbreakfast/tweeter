@@ -6,10 +6,16 @@
   margin: auto;
   padding: 10px;
 }
-
 .new-tweet-header {
   display: flex;
   justify-content: flex-start;
   margin: 0;
   border-bottom: 1px solid #535353;
+}
+.new-tweet-text {
+  width: 427px;
+  height: 59px;
+}
+.new-tweet-footer .submit {
+  justify-content: flex-start;
 }
