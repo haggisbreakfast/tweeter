@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
 
   <!-- External JS -->
@@ -36,20 +37,27 @@
   <main class="container">
     <section class="new-tweet">
       <h2 class="new-tweet-header">Compose Tweet</h2>
-      <form method="POST" action="/tweets/">
-        <textarea class="new-tweet-text" placeholder="What are you humming about?"></textarea>
-
-        <div class="new-tweet-footer">
-          <input type="submit" value="Tweet">
-          <span class="counter" id="counter">140</span>
-        </div>
-      </form>
+      <form method="POST" action="/tweets/"></form>
+      <textarea class="new-tweet-text" placeholder="What are you humming about?"></textarea>
+      <div class="new-tweet-footer">
+        <input type="submit" value="Tweet">
+        <span id="counter">140</span>
+      </div>
     </section>
+    <section>
+      <article id="tweet-container">
+        <header>
+          testtesttesttesttesttest
+        </header>
+        <footer>
 
-
+        </footer>
+      </article>
+    </section>
   </main>
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
+
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </body>
 
 </html>

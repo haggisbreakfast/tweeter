@@ -1,0 +1,11 @@
+#tweet-container {
+  display: flex;
+  width: 450px;
+  height: 130px;
+  border-radius: 5px;
+  background: #eeeeee;
+  border: 1px solid #d1d0d0;
+  margin: 15px 75px 15px 75px;
+  padding: 10px;
+  align-items: center;
+}

@@ -16,6 +16,14 @@
   width: 427px;
   height: 59px;
 }
+.new-tweet-footer {
+  display: flex;
+  justify-content: space-between;
+}
 .new-tweet-footer .submit {
-  justify-content: flex-start;
+}
+
+.new-tweet-footer #counter {
+  justify-content: space-between;
+  align-items: flex-end;
 }
