@@ -1,24 +1,10 @@
-$(function() {
+$(function () {
   /*
  * Client-side JS logic goes here
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-  const tweetData = {
-    user: {
-      name: 'Newton',
-      avatars: {
-        small: 'https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png',
-        regular: 'https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png',
-        large: 'https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png'
-      },
-      handle: '@SirIsaac'
-    },
-    content: {
-      text: 'If I have seen further it is by standing on the shoulders of giants'
-    },
-    created_at: 1461116232227
-  };
+
 
   function createTweetElement(tweetData) {
     var $article = $('<article>').addClass('tweet-container');
@@ -103,12 +89,52 @@ $(function() {
 
   function renderTweets(tweets) {
     // loops through tweets
-    data.forEach(function(element) {
+    tweets.forEach(function (element) {
       var result = createTweetElement(element);
-      $('.alltweetscontainer').append(result);
+      $('.alltweetscontainer').prepend(result);
       console.log(element);
     });
   }
 
   renderTweets(data);
+
+  // <main class="container">
+  //   <section class="new-tweet">
+  //     <h2 class="new-tweet-header">Compose Tweet</h2>
+  //     <form id="new-tweet" method="POST" action="/tweets">
+  //       <textarea class="new-tweet-text" name="text"
+
+  var $newTweetForm = $('#new-tweet').on('submit', function (event) {
+    // prevent submitting and reloading page
+    event.preventDefault();
+    let tweetLength = $('.new-tweet-text').val().length;
+    if (tweetLength <= 0) {
+      alert('there is no tweet here wtf');
+    } else if (tweetLength > 140) {
+      alert('whoa man 2 long');
+    } else {
+      console.log('submit successful');
+      var data = $newTweetForm.serialize();
+      console.log(data);
+    }
+
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: data,
+      success: function (result) {
+        $('.alltweetscontainer').prepend(data);
+        loadTweets();
+      },
+      error: function (err) { }
+    });
+  });
+  console.log($newTweetForm);
+
+  function loadTweets() {
+    $.get('/tweets', function (tweets) {
+      renderTweets(tweets);
+    });
+  }
+  loadTweets();
 });

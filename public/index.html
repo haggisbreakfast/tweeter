@@ -37,16 +37,18 @@
   <main class="container">
     <section class="new-tweet">
       <h2 class="new-tweet-header">Compose Tweet</h2>
-      <form method="POST" action="/tweets/"></form>
-      <textarea class="new-tweet-text" placeholder="What are you humming about?"></textarea>
-      <div class="new-tweet-footer">
-        <input type="submit" value="Tweet">
-        <span id="counter">140</span>
-      </div>
+      <form id="new-tweet" method="POST" action="/tweets">
+        <textarea class="new-tweet-text" name="text" placeholder="What are you humming about?"></textarea>
+
+        <div class="new-tweet-footer">
+          <input type="submit" value="Tweet">
+          <span id="counter">140</span>
+        </div>
+      </form>
     </section>
     <!-- tweets containers -->
     <article class="alltweetscontainer">
-      <article class="tweet-container">
+      <!-- <article class="tweet-container">
         <header class="tweet-container-header">
           <img class="image" src="https://upload.wikimedia.org/wikipedia/en/7/70/George_Costanza.jpg">
           <h2 class="name">Bill Fieldz</h2>
@@ -60,7 +62,7 @@
         <footer>
           10 days ago
         </footer>
-      </article>
+      </article> -->
     </article>
 
 

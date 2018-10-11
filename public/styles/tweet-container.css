@@ -1,3 +1,5 @@
+.alltweetscontainer {
+}
 .tweet-container {
   width: 450px;
 
@@ -8,6 +10,7 @@
   padding: 10px;
   justify-content: space-between;
 }
+
 .tweet-container-header {
   width: 450px;
   display: flex;
