@@ -21,46 +21,94 @@ $(function() {
   };
 
   function createTweetElement(tweetData) {
-    // <article class="tweet-container">
-    //   <header class="tweet-container-header">
-    //     <img class="image" src="">
-    //     <h2 class="name">Bill Fieldz</h2>
-    //     <h4 class="twitterhandle">twitterhandle</h4>
-    //   </header>
-    //   <section>
-    //     <p>
-    //       tweet
-    //     </p>
-    //   </section>
-    //   <footer>
-    //     footer
-    //   </footer>
-    // </article>
-    var $tweet = $('<article>').addClass('tweet-container');
+    var $article = $('<article>').addClass('tweet-container');
     var $header = $('<header>').addClass('tweet-container-header');
     var $image = $('<img>')
       .addClass('image')
-      .attr('src', 'url');
-    var $h2 = $('<h2>').addClass('name');
-    var $h4 = $('<h4>').addClass('twitterhandle');
+      .attr('src', tweetData.user.avatars.small);
+    var $h2 = $('<h2>')
+      .addClass('name')
+      .text(tweetData.user.name);
+    var $h4 = $('<h4>')
+      .addClass('twitterhandle')
+      .text(tweetData.user.handle);
     var $section = $('<section>');
-    var $p = $('<p>');
-    var $footer = $('<footer>');
+    var $p = $('<p>').text(tweetData.content.text);
+    var $footer = $('<footer>').text(tweetData.created_at);
 
     $section = $section.append($p);
-    $header = $header.append($h4, $h2, $image);
-    $tweet.append($footer, $section, $header);
+    $header = $header
+      .append($h4)
+      .append($h2)
+      .append($image);
+    $article
+      .append($footer)
+      .append($section)
+      .append($header);
+    let $tweet = $article;
 
-    return $tweet;
+    // $tweet.append(tweetData);
+    return $tweet.append(tweetData);
   }
-  let $tweet = createTweetElement(tweetData);
-  console.log($tweet);
+  //let $tweet = createTweetElement(tweetData);
+  //console.log($tweet);
 
-  $('.container').append($tweet);
+  const data = [
+    {
+      user: {
+        name: 'Newton',
+        avatars: {
+          small: 'https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png',
+          regular: 'https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png',
+          large: 'https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png'
+        },
+        handle: '@SirIsaac'
+      },
+      content: {
+        text: 'If I have seen further it is by standing on the shoulders of giants'
+      },
+      created_at: 1461116232227
+    },
+    {
+      user: {
+        name: 'Descartes',
+        avatars: {
+          small: 'https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png',
+          regular: 'https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc.png',
+          large: 'https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png'
+        },
+        handle: '@rd'
+      },
+      content: {
+        text: 'Je pense , donc je suis'
+      },
+      created_at: 1461113959088
+    },
+    {
+      user: {
+        name: 'Johann von Goethe',
+        avatars: {
+          small: 'https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png',
+          regular: 'https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png',
+          large: 'https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png'
+        },
+        handle: '@johann49'
+      },
+      content: {
+        text: 'Es ist nichts schrecklicher als eine tätige Unwissenheit.'
+      },
+      created_at: 1461113796368
+    }
+  ];
+
+  function renderTweets(tweets) {
+    // loops through tweets
+    data.forEach(function(element) {
+      var result = createTweetElement(element);
+      $('.alltweetscontainer').append(result);
+      console.log(element);
+    });
+  }
+
+  renderTweets(data);
 });
-
-// function renderTweets(tweets) {
-//   // loops through tweets
-//   // calls createTweetElement for each tweet
-//   // takes return value and appends it to the tweets container
-// }

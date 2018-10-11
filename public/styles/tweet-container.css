@@ -1,6 +1,6 @@
 .tweet-container {
   width: 450px;
-  height: 200px;
+
   border-radius: 5px;
   background: #eeeeee;
   border: 1px solid #d1d0d0;
@@ -16,8 +16,8 @@
   color: dimgrey;
 }
 .image {
-  width: 60px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
 }
 .tweet-container-footer {
   width: 450px;
