@@ -1,11 +1,37 @@
-#tweet-container {
-  display: flex;
+.tweet-container {
   width: 450px;
-  height: 130px;
+  height: 200px;
   border-radius: 5px;
   background: #eeeeee;
   border: 1px solid #d1d0d0;
   margin: 15px 75px 15px 75px;
   padding: 10px;
-  align-items: center;
+  justify-content: space-between;
+}
+.tweet-container-header {
+  width: 450px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: dimgrey;
+}
+.image {
+  width: 60px;
+  height: 70px;
+}
+.tweet-container-footer {
+  width: 450px;
+}
+.tweet-container-name {
+}
+.twitterhandle {
+  margin-right: 20px;
+}
+footer {
+  display: flex;
+  align-items: flex-end;
+  padding-top: 30px;
+}
+p {
+  color: dimgrey;
 }
