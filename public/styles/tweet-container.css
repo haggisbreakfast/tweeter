@@ -35,6 +35,8 @@ footer {
   align-items: flex-end;
   padding-top: 30px;
 }
-p {
+section {
   color: dimgrey;
+  display: felx;
+  flex-wrap: wrap
 }

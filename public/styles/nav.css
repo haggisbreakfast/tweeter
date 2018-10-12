@@ -25,3 +25,14 @@
   margin-left: 10px;
   padding-left: 10px;
 }
+
+#compose-button {
+  float: right;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  height: 40px;
+  width: 80px
+}
