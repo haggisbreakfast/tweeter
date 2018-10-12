@@ -38,7 +38,9 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
+
     <section class="new-tweet">
+      <div class="error-message">test</div>
       <h2 class="new-tweet-header">Compose Tweet</h2>
       <form id="new-tweet" method="POST" action="/tweets">
         <textarea id="new-tweet-text" name="text" placeholder="What are you humming about?"></textarea>
@@ -47,6 +49,7 @@
           <span id="counter">140</span>
         </div>
       </form>
+
     </section>
     <!-- tweets containers -->
     <article class="alltweetscontainer">

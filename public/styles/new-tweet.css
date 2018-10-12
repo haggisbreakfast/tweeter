@@ -5,6 +5,7 @@
   border: 1px solid #d1d0d0;
   margin: auto;
   padding: 10px;
+  display: none
 }
 .new-tweet-header {
   display: flex;
@@ -27,4 +28,9 @@
   justify-content: space-between;
   align-items: flex-end;
   font-style: italic;
+}
+
+.error-message {
+background-color: red;
+display: none
 }

@@ -108,10 +108,11 @@ $(function () {
     // prevent submitting and reloading page
     event.preventDefault();
     let tweetLength = $('#new-tweet-text').val().length;
+    $(".error-message").slideUp();
     if (tweetLength <= 0) {
-      alert('there is no tweet here wtf');
+      $(".error-message").text("no tweet bro").slideDown()
     } else if (tweetLength > 140) {
-      alert('whoa man 2 long');
+      $(".error-message").text("2 long").slideDown()
     } else {
       console.log('submit successful');
       var data = $newTweetForm.serialize();
