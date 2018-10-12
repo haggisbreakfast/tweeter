@@ -6,6 +6,22 @@ $(function () {
  */
 
 
+  // <!-- <article class="tweet-container">
+  // <header class="tweet-container-header">
+  //   <img class="image" src="https://upload.wikimedia.org/wikipedia/en/7/70/George_Costanza.jpg">
+  //   <h2 class="name">Bill Fieldz</h2>
+  //   <h4 class="twitterhandle">@hiimbillfiedlz</h4>
+  // </header>
+  // <section>
+  //   <p>
+  //     tweettweettweettweettweettweettweettweettweettweet
+  //   </p>
+  // </section>
+  // <footer>
+  //   10 days ago
+  // </footer>
+  // </article>
+
   function createTweetElement(tweetData) {
     var $article = $('<article>').addClass('tweet-container');
     var $header = $('<header>').addClass('tweet-container-header');
@@ -24,13 +40,13 @@ $(function () {
 
     $section = $section.append($p);
     $header = $header
-      .append($h4)
+      .append($image)
       .append($h2)
-      .append($image);
+      .append($h4);
     $article
-      .append($footer)
+      .append($header)
       .append($section)
-      .append($header);
+      .append($footer)
     let $tweet = $article;
 
     // $tweet.append(tweetData);

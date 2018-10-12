@@ -1,5 +1,6 @@
-.new-tweet {
+.new-tweet-container {
   width: 450px;
+  height: 150px;
   border-radius: 5px;
   background: #eeeeee;
   border: 1px solid #d1d0d0;
@@ -7,12 +8,16 @@
   padding: 10px;
   display: none
 }
+#new-tweet-form {
+  height:60px
+}
 .new-tweet-header {
   display: flex;
   justify-content: flex-start;
   margin: 0;
   border-bottom: 1px solid #535353;
 }
+
 #new-tweet-text {
   width: 427px;
   height: 59px;
@@ -20,8 +25,6 @@
 .new-tweet-footer {
   display: flex;
   justify-content: space-between;
-}
-.new-tweet-footer .submit {
 }
 
 .new-tweet-footer #counter {
@@ -34,3 +37,4 @@
 background-color: red;
 display: none
 }
+

@@ -1,8 +1,8 @@
 .alltweetscontainer {
 }
+
 .tweet-container {
   width: 450px;
-
   border-radius: 5px;
   background: #eeeeee;
   border: 1px solid #d1d0d0;
@@ -18,15 +18,19 @@
   justify-content: space-between;
   color: dimgrey;
 }
+
 .image {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+}
+.name {
+
 }
 .tweet-container-footer {
   width: 450px;
 }
-.tweet-container-name {
-}
+
 .twitterhandle {
   margin-right: 20px;
 }
@@ -36,7 +40,10 @@ footer {
   padding-top: 30px;
 }
 section {
-  color: dimgrey;
-  display: felx;
-  flex-wrap: wrap
+color: dimgrey;
+width: 450 px
+}
+p {
+  overflow-wrap: break-word;
+  text-align: left
 }
