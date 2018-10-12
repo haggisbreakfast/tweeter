@@ -107,7 +107,7 @@ $(function () {
   var $newTweetForm = $('#new-tweet').on('submit', function (event) {
     // prevent submitting and reloading page
     event.preventDefault();
-    let tweetLength = $('.new-tweet-text').val().length;
+    let tweetLength = $('#new-tweet-text').val().length;
     if (tweetLength <= 0) {
       alert('there is no tweet here wtf');
     } else if (tweetLength > 140) {
