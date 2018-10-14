@@ -1,26 +1,4 @@
 $(function () {
-  /*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-
-  // <!-- <article class="tweet-container">
-  // <header class="tweet-container-header">
-  //   <img class="image" src="https://upload.wikimedia.org/wikipedia/en/7/70/George_Costanza.jpg">
-  //   <h2 class="name">Bill Fieldz</h2>
-  //   <h4 class="twitterhandle">@hiimbillfiedlz</h4>
-  // </header>
-  // <section>
-  //   <p>
-  //     tweettweettweettweettweettweettweettweettweettweet
-  //   </p>
-  // </section>
-  // <footer>
-  //   10 days ago
-  // </footer>
-  // </article>
 
   function createTweetElement(tweetData) {
     var $article = $('<article>').addClass('tweet-container');
@@ -34,11 +12,12 @@ $(function () {
     var $h4 = $('<h4>')
       .addClass('twitterhandle')
       .text(tweetData.user.handle);
-    var $section = $('<section>');
-    var $p = $('<p>').text(tweetData.content.text);
+    var $section = $('<section>').text(tweetData.content.text);
+    // var $p = $('<p>')
     var $footer = $('<footer>').text(tweetData.created_at);
 
-    $section = $section.append($p);
+    $section = $section
+    // .append($p);
     $header = $header
       .append($image)
       .append($h2)
@@ -114,25 +93,19 @@ $(function () {
 
   renderTweets(data);
 
-  // <main class="container">
-  //   <section class="new-tweet">
-  //     <h2 class="new-tweet-header">Compose Tweet</h2>
-  //     <form id="new-tweet" method="POST" action="/tweets">
-  //       <textarea class="new-tweet-text" name="text"
-
   var $newTweetForm = $('#new-tweet').on('submit', function (event) {
     // prevent submitting and reloading page
     event.preventDefault();
     let tweetLength = $('#new-tweet-text').val().length;
     $(".error-message").slideUp();
     if (tweetLength <= 0) {
-      $(".error-message").text("no tweet bro").slideDown()
+      $(".error-message").text("you gotta write something first!").slideDown()
     } else if (tweetLength > 140) {
-      $(".error-message").text("2 long").slideDown()
+      $(".error-message").text("still too long...").slideDown()
     } else {
       console.log('submit successful');
       var data = $newTweetForm.serialize();
-      console.log(data);
+      $('#new-tweet-text').val("");
     }
 
     $.ajax({
@@ -150,6 +123,7 @@ $(function () {
 
   function loadTweets() {
     $.get('/tweets', function (tweets) {
+      $("#tweets").empty();
       renderTweets(tweets);
     });
   }
