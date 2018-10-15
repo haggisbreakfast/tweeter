@@ -1,33 +1,27 @@
-.alltweetscontainer {
-}
 
 .tweet-container {
   width: 450px;
-  border-radius: 5px;
   background: #eeeeee;
   border: 1px solid #d1d0d0;
+  border-radius: 5px;
   margin: 15px 75px 15px 75px;
   padding: 0px;
-}
-tweet-container:hover {
-  color:blue
+  opacity: 0.8;
 }
 .tweet-container:hover {
   opacity: 1;
 }
-
+/* successfully attempted using flex-box */
 .tweet-container-header {
   width: 450px;
   height: 80px;
   display: flex;
   flex-direction: row;
   flex:center;
-  /* justify-content: space-between; */
-  color: dimgrey;
+  color: rgb(83, 83, 83);
   padding-top: 10px;
   padding-left: 10px;
 }
-
 .image {
   width: 60px;
   height: 60px;
@@ -38,11 +32,6 @@ tweet-container:hover {
   margin-left: 20px;
   margin-top: 5px
 }
-.tweet-container-footer {
-  width: 450px;
-  font-size:
-}
-
 .twitterhandle {
   margin-right: 20px;
   margin-left: 20px;
@@ -54,18 +43,31 @@ tweet-container:hover {
 }
 footer {
   display: flex;
-  align-items: flex-end;
+  justify-content: space-between;
   padding: 10px;
-  border-top: 1px solid #a7a7a7;
+  border-bottom: 1px solid #a7a7a7d0;
+  border-top: 1px solid #a7a7a7d0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   background-color: white
 }
+.icons {
+ float: right;
+  display: none;
+  color: #00a087;
+  padding: 2px;
+}
+.tweet-container:hover footer .icons {
+  display: block
+}
 section {
-color: dimgrey;
-width: 450px;
-height: 50px;
-background-color: white;
-padding: 5px;
+  color: rgb(83, 83, 83);
+  border-right: 1px solid #d1d0d0;
+  width: 449px;
+  height: 50px;
+  background-color: white;
+  padding: 5px;
   overflow-wrap: break-word;
   text-align: left;
-font-size: 16px
+  font-size: 16px
 }
