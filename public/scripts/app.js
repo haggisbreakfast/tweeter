@@ -16,7 +16,7 @@ $(function () {
     var $section = $('<section>').text(tweetData.content.text);
     var $footer = $('<footer>')
     var $icons = $('<div>').addClass('icons');
-    var $timestamp = $('<div>').text(moment(new Date(tweetData.created_at)).fromNow())
+    var $timestamp = $('<div>').text(moment(tweetData.created_at).fromNow())
     // inserted favicons
     var $heartIcon = $('<i class = "fa fa-heart" >');
     var $retweetIcon = $('<i class = "fa fa-retweet" >');
