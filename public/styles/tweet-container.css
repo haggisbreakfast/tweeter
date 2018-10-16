@@ -52,13 +52,15 @@ footer {
   background-color: white
 }
 .icons {
- float: right;
-  display: none;
+  width: 20%;
+display: flex;
+justify-content: space-between;
+  opacity: 0;
   color: #00a087;
   padding: 2px;
 }
 .tweet-container:hover footer .icons {
-  display: block
+  opacity: 1;
 }
 section {
   color: rgb(83, 83, 83);

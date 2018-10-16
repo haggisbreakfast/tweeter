@@ -9,13 +9,11 @@
   width: 100%;
   z-index: 1;
 }
-
 #nav-bar .logo {
   float: left;
   height: 80px;
   width: 80px;
 }
-
 #nav-bar .header {
   /* should be 2X regular font-size */
   float: left;
@@ -25,7 +23,6 @@
   margin-left: 10px;
   padding-left: 10px;
 }
-
 #compose-button {
   float: right;
   cursor: pointer;

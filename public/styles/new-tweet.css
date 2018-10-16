@@ -18,28 +18,25 @@
   margin-bottom: 10px;
   border-bottom: 1px solid #535353;
 }
-
 #new-tweet-text {
   width: 427px;
   height: 59px;
   margin-top: 5px;
   margin-bottom: 5px
 }
-
 .new-tweet-footer {
   display: flex;
   justify-content: space-between;
 }
-
 .new-tweet-footer #counter {
   justify-content: space-between;
   align-items: flex-end;
   font-style: italic;
 }
-
 .error-message {
 color: rgb(235, 84, 84);
 display: none;
-font-style: italic
+font-style: italic;
+align-content: center;
 }
 
