@@ -15,3 +15,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Screenshot of tweet compose box"](https://github.com/haggisbreakfast/tweeter/blob/master/docs/creating%20tweet.PNG?raw=true)
+!["Screenshot demonstrating error message"](https://github.com/haggisbreakfast/tweeter/blob/master/docs/too%20long%20tweet.PNG?raw=true)
